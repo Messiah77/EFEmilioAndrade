@@ -41,6 +41,7 @@ public partial class MainPage : ContentPage
             if (action == "Modificar")
             {
                 //await Shell.Current.GoToAsync($"{nameof(Id)}={satelite.id}");
+                await Shell.Current.GoToAsync($"{nameof(SatelitePage)}?{nameof(SatelitePage.Id)}={satelite.id}");
             }
             else if (action == "Eliminar")
             {
