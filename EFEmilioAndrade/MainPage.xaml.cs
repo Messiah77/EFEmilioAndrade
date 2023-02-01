@@ -1,6 +1,7 @@
 ﻿using EFEmilioAndrade.JEAIModels;
 using Newtonsoft.Json;
 using System.Net;
+using System.Reflection;
 
 namespace EFEmilioAndrade;
 
@@ -26,6 +27,30 @@ public partial class MainPage : ContentPage
             String content = await response.Content.ReadAsStringAsync();
             var resultado = JsonConvert.DeserializeObject<List<Satelite>>(content);
             ListaISSJEAI.ItemsSource = resultado;
+        }
+    }
+
+    private async void SateliteChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (e.CurrentSelection.Count != 0)
+        {
+            var satelite = (JEAIModels.Satelite)e.CurrentSelection[0];
+
+            string action = await DisplayActionSheet("Escoja una opción:", "Modificar", "Eliminar");
+
+            if (action == "Modificar")
+            {
+                await Shell.Current.GoToAsync($"{nameof(Id)}={satelite.id}");
+            }
+            else if (action == "Eliminar")
+            {
+                //DeleteSatelite(satelite);
+            }
+            else
+            {
+                //LoadData();
+            }
+
         }
     }
 }
