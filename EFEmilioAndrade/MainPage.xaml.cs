@@ -44,7 +44,7 @@ public partial class MainPage : ContentPage
             }
             else if (action == "Eliminar")
             {
-                //App.SateliteRepo.DeleteSatelite(satelite);
+                App.SateliteRepo.DeleteSatelite(satelite);
             }
             else
             {

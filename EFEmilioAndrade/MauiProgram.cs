@@ -1,4 +1,6 @@
-﻿namespace EFEmilioAndrade;
+﻿using EFEmilioAndrade.JEAIData;
+
+namespace EFEmilioAndrade;
 
 public static class MauiProgram
 {
@@ -13,6 +15,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
-	}
+        string dbPath = FileAccessHelper.GetLocalFilePath("satelite.db3");
+        builder.Services.AddSingleton<JEAISateliteDataBase>(s => ActivatorUtilities.CreateInstance<JEAISateliteDataBase>(s, dbPath));
+        return builder.Build();
+    }
 }
