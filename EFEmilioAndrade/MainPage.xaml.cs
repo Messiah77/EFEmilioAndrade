@@ -40,11 +40,11 @@ public partial class MainPage : ContentPage
 
             if (action == "Modificar")
             {
-                await Shell.Current.GoToAsync($"{nameof(Id)}={satelite.id}");
+                //await Shell.Current.GoToAsync($"{nameof(Id)}={satelite.id}");
             }
             else if (action == "Eliminar")
             {
-                //DeleteSatelite(satelite);
+                //App.SateliteRepo.DeleteSatelite(satelite);
             }
             else
             {
