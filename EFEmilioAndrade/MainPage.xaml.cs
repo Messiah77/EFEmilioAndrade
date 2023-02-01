@@ -25,7 +25,7 @@ public partial class MainPage : ContentPage
         {
             String content = await response.Content.ReadAsStringAsync();
             var resultado = JsonConvert.DeserializeObject<List<Satelite>>(content);
-            ListaDemo.ItemsSource = resultado;
+            ListaISSJEAI.ItemsSource = resultado;
         }
     }
 }
