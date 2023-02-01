@@ -4,13 +4,13 @@
              x:Class="EFEmilioAndrade.MainPage">
 
     <StackLayout>
-        <Label Text="Lista de satelites" FontSize="Title" Padding="30,10,30,10"/>
-        <Button Text="Llamar API" Clicked="Button_Clicked" />
+        <Label Text="Ubicación de la ISS" FontSize="Title" Padding="30,10,30,10"/>
+        <Button Text="Llamar a ISS" Clicked="Button_Clicked" />
         <ListView x:Name="ListaDemo">
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding name}"  Detail="{Binding id}"
-                              />
+                    <TextCell Text="{Binding name}"  Detail="{Binding id}"/>
                 </DataTemplate>
 
             </ListView.ItemTemplate>
