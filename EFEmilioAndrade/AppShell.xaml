@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
+        Title="Estación Espacial Internacional "
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
