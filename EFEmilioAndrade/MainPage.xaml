@@ -21,6 +21,7 @@
                                VerticalOptions="Center"/>
                         <StackLayout Grid.Column="1">
                             <Label Text="{Binding name}" />
+                            <Label Text="{Binding latitude}" FontSize="9"/>
                         </StackLayout>
                     </Grid>
                 </DataTemplate>
